@@ -9,8 +9,7 @@
   },
   "scripts": {
     "dev": "netlify dev",
-    "tsc": "tsc",
-    "build": "tsc"
+    "build": "netlify build"
   },
   "repository": {
     "type": "git",
