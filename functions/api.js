@@ -34,15 +34,15 @@ router.post("/sendmail", (req, res) => {
   const mailOptions = {
     from: process.env.MAIL,
     to: "maharteecor@gmail.com",
+    bcc: "wueliton.horacio@gmail.com",
     subject: "Nova inscrição - Workshop Belas Rosas",
     html: email,
   };
 
   transporter.sendMail(mailOptions, (err, info) => {
-    if (err) console.log(err);
-    else console.log("E-mail enviado com sucesso");
+    if (err) res.status(500).json({ message: err });
+    else res.status(200).end();
   });
-  res.status(200).end();
 });
 
 app.use("/.netlify/functions/api", router);

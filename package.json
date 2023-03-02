@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "netlify dev",
-    "build": "netlify build"
+    "build": "netlify deploy --prod",
+    "link": "netlify link"
   },
   "repository": {
     "type": "git",
