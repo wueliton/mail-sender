@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/wueliton/mail-sender#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "netlify-cli": "^13.0.0",

@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 const serverless = require("serverless-http");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -19,6 +20,11 @@ const transporter = nodemailer.createTransport({
 });
 
 app.use(express.json());
+app.use(
+  cors({
+    origing: "https://www.workshop.lojaarteecor.com.br",
+  })
+);
 
 router.get("/", (_, res) => {
   res.json({ message: process.env.MAIL });
